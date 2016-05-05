@@ -7,12 +7,12 @@ local date = os.date("%Y-%m-%d") -- today
 
 -- pull data from fitbit
 local request = http.request {
-		url = [[https://api.fitbit.com/1/user/-/activities/heart/date/]] .. date .. [[/1d/1sec.json]],
-		method = "GET",
-		headers = {
-			authorization = "Bearer " .. fitbitToken
- 	 }
-	}
+	url = [[https://api.fitbit.com/1/user/-/activities/heart/date/]] .. date .. [[/1d/1sec.json]],
+	method = "GET",
+	headers = {
+		authorization = "Bearer " .. fitbitToken
+ 	}
+}
 
 -- set data variable to the heartbeat dataset
 local jsonData = json.parse(request.content)

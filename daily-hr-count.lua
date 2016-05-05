@@ -40,4 +40,4 @@ for i = 1, #data, 1 do
 end
 
 -- return integer
-return "My heart beat " .. math.floor(count/1000) .. "k times today."
+return "My heart beat " .. math.floor(count/1000) .. "k times today and averaged " .. math.floor(count/(60*24)) .. " BPM throughout the day."
